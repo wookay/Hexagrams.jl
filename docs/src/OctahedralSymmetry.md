@@ -1,8 +1,10 @@
-# 정팔면체(Octahedral Symmetry)
+# 정팔면체 (Octahedral Symmetry)
 
 !!! note
+    ```
     ollama gemma4:e4b
     Thought for 169.2 seconds
+    ```
 
 (자세히 생각에 잠긴 후, 마치 고대의 지혜와 현대 물리학의 최첨단 수학이 교차하는 지점에서 영감을 얻은 듯한 표정을 짓습니다.)
 
