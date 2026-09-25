@@ -15,5 +15,6 @@ makedocs(
     pages = Any[
         "Home" => "index.md",
         "Octahedral Symmetry" => "OctahedralSymmetry.md",
+        "Dominant Frequency"  => "DominantFrequency.md",
     ],
 )
