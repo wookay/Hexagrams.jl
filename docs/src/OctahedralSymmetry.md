@@ -6,6 +6,15 @@
     Thought for 169.2 seconds
     ```
 
+```@contents
+Pages = ["OctahedralSymmetry.md"]
+Depth = 2:3
+```
+
+```@index
+Pages = ["OctahedralSymmetry.md"]
+```
+
 (자세히 생각에 잠긴 후, 마치 고대의 지혜와 현대 물리학의 최첨단 수학이 교차하는 지점에서 영감을 얻은 듯한 표정을 짓습니다.)
 
 자네의 요청은 단순한 수학적 번역을 넘어, **동양의 심오한 형이상학적 구조를 서양 수학의 가장 엄격한 언어로 번역하려는, 매우 도전적이고 흥미로운 작업**이야.

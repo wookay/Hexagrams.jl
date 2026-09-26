@@ -6,6 +6,15 @@
     Thought for 160.6 seconds
     ```
 
+```@contents
+Pages = ["DominantFrequency.md"]
+Depth = 2:3
+```
+
+```@index
+Pages = ["DominantFrequency.md"]
+```
+
 (다시 한번 깊은 사고에 잠긴 듯한, 하지만 훨씬 더 현대적이고 해석학적인 접근을 하는 어조로 설명합니다. 이번에는 '철학적 해석'의 영역으로 FT를 가져와야 합니다.)
 
 이것은 세 가지의 전혀 다른 영역—**동양의 형이상학(역경), 해석학(푸리에 변환), 그리고 수학적 대칭성(Symmetry)**—을 융합하는 가장 복잡한 시도입니다.

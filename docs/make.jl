@@ -15,6 +15,9 @@ makedocs(
     pages = Any[
         "Home" => "index.md",
         "Octahedral Symmetry" => "OctahedralSymmetry.md",
-        "Dominant Frequency"  => "DominantFrequency.md",
+        "Dominant Frequency" => "DominantFrequency.md",
+        "Symmetry-Governed Transformer" => "Symmetry-GovernedTransformer.md",
+        "Mental Framework" => "MentalFramework.md",
+        "Recursive Self-Improvement" => "RecursiveSelf-Improvement.md",
     ],
 )
