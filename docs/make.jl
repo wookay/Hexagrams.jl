@@ -19,5 +19,6 @@ makedocs(
         "Symmetry-Governed Transformer" => "Symmetry-GovernedTransformer.md",
         "Mental Framework" => "MentalFramework.md",
         "Recursive Self-Improvement" => "RecursiveSelf-Improvement.md",
+        "Meta-Cognitive Linking" => "Meta-CognitiveLinking.md",
     ],
 )
