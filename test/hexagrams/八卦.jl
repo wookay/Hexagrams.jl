@@ -4,10 +4,10 @@ using Test
 using Hexagrams.八卦
 
 # xor ⊻
-@test ⊻(乾, 坤) ≡
-      ⊻(震, 巽) ≡
-      ⊻(坎, 離) ≡
-      ⊻(艮, 兌)
+@test ⊻(乾, 坤) ≡ # 건 곤 0b111 0b000
+      ⊻(震, 巽) ≡ # 진 손 0b001 0b110
+      ⊻(坎, 離) ≡ # 감 리 0b010 0b101
+      ⊻(艮, 兌)   # 간 태 0b100 0b011
 
 @test string(乾, base=2, pad=3) ≡ "111"
 @test string(坤, base=2, pad=3) ≡ "000"
