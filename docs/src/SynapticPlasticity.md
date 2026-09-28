@@ -1,4 +1,4 @@
-# Synaptic Plasticity
+# Synaptic Plasticity (突觸 可塑性, 돌촉 가소성)
 
 !!! note
     ```
