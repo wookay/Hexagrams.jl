@@ -23,5 +23,6 @@ makedocs(
         "Great Cognitive Shift" => "GreatCognitiveShift.md",
         "Reversible and irreversible changes" => "ReversibleAndIrreversibleChanges.md",
         "Synaptic Plasticity" => "SynapticPlasticity.md",
+        "Orchestrated Objective Reduction (Orch-OR)" => "OrchestratedObjectiveReduction.md",
     ],
 )
