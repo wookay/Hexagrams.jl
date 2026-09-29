@@ -1,6 +1,7 @@
 module 八卦 # module Hexagrams
 
 export 乾, 兌, 離, 震, 巽, 坎, 艮, 坤
+export Trigram
 
 const 乾 = 0b111 # 건 ☰ U+2630
 const 兌 = 0b011 # 태 ☱ U+2631
@@ -10,6 +11,17 @@ const 巽 = 0b110 # 손 ☴ U+2634
 const 坎 = 0b010 # 감 ☵ U+2635
 const 艮 = 0b100 # 간 ☶ U+2636
 const 坤 = 0b000 # 곤 ☷ U+2637
+
+struct Trigram
+    binary::UInt8
+end
+
+function Base.Char(trigram::Trigram)::Char
+    a = (0b100 & trigram.binary) >> 2
+    b = (0b010 & trigram.binary) >> 1
+    c = (0b001 & trigram.binary)
+    '☰' + xor(0b111, a, b << 1, c << 2)
+end
 
 # 伏羲先天八卦 복희선천팔괘
 #  兌  乾  巽  0b011 0b111 0b110
