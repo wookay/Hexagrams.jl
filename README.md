@@ -7,6 +7,11 @@
 
 * Root system  https://en.wikipedia.org/wiki/Root_system
 * 易 (I Ching)  https://en.wikipedia.org/wiki/Hexagram_(I_Ching)
+* 八卦  https://en.wikipedia.org/wiki/Bagua
+
+### repositories
+ - Hexagrams.jl ☯  https://github.com/wookay/Hexagrams.jl
+ - Sexagesimal.jl ♒️  https://github.com/wookay/Sexagesimal.jl
 
 
 [docs-latest-img]: https://img.shields.io/badge/docs-latest-blue.svg
