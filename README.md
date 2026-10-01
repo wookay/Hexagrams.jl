@@ -4,6 +4,18 @@
 |:-----------------------------------------:|:---------------------------------:|
 |  [![][docs-latest-img]][docs-latest-url]  |  [![][actions-img]][actions-url]  |
 
+```julia
+julia> using Hexagrams.八卦
+
+julia> 乾 ≡ 0b111
+true
+
+julia> 坤 ≡ 0b000
+true
+
+julia> ⊻(乾, 坤) ≡ ⊻(震, 巽) ≡ ⊻(坎, 離) ≡ ⊻(艮, 兌)
+true
+```
 
 * Root system  https://en.wikipedia.org/wiki/Root_system
 * 易 (I Ching)  https://en.wikipedia.org/wiki/Hexagram_(I_Ching)
