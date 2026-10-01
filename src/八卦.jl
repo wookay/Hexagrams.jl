@@ -42,15 +42,4 @@ function Base.UInt16(triple::Triple)::UInt16
     UInt16(triple.a) << 0b110 | triple.b << 0b11 | triple.c
 end
 
-
-# 伏羲先天八卦 복희선천팔괘
-#  兌  乾  巽  0b011 0b111 0b110
-#  離      坎  0b101       0b010
-#  震  坤  艮  0b001 0b000 0b100
-
-# 文王八卦     문왕팔괘
-#  乾  坎  艮  0b111 0b010 0b100
-#  兌      震  0b011       0b001
-#  坤  離  巽  0b000 0b101 0b110
-
 end  # module Hexagrams.八卦
