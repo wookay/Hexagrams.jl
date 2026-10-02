@@ -24,5 +24,6 @@ makedocs(
         "Reversible and irreversible changes" => "ReversibleAndIrreversibleChanges.md",
         "Synaptic Plasticity" => "SynapticPlasticity.md",
         "Orchestrated Objective Reduction (Orch-OR)" => "OrchestratedObjectiveReduction.md",
+        "Quantum Biology" => "QuantumBiology.md",
     ],
 )
