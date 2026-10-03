@@ -30,6 +30,12 @@ using Hexagrams.八卦
 @test string(乾, base=2, pad=3) ≡ "111"
 @test string(坤, base=2, pad=3) ≡ "000"
 
+if VERSION >= v"1.14-DEV"
+@test Base.ispacked(卦) ≡ false
+else
+@test Base.ispacked(卦)
+end
+
 # rad2deg(tau/(8/卦))               rad2deg(tau/(8/(xor(乾, 卦))))
 # 兌 0b011 坎 0b010 震 0b001        艮 0b100 離 0b101 巽 0b110
 # 艮 0b100          坤 0b000        兌 0b011          乾 0b111
