@@ -17,8 +17,6 @@ julia> ⊻(乾, 坤) ≡ ⊻(震, 巽) ≡ ⊻(坎, 離) ≡ ⊻(艮, 兌)
 true
 ```
 
-* Root system  https://en.wikipedia.org/wiki/Root_system
-* 易 (I Ching)  https://en.wikipedia.org/wiki/Hexagram_(I_Ching)
 * 八卦  https://en.wikipedia.org/wiki/Bagua
 
 ### repositories
