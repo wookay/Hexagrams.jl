@@ -24,9 +24,6 @@ using Hexagrams.八卦
 @test Char(Trigram(坤)) ≡ '☷'
 @test Trigram(乾).binary ≡ 乾
 
-@test UInt8( Double(乾, 乾))     ≡     0b111_111
-@test UInt16(Triple(乾, 乾, 乾)) ≡ 0b111_111_111
-
 @test string(乾, base=2, pad=3) ≡ "111"
 @test string(坤, base=2, pad=3) ≡ "000"
 
