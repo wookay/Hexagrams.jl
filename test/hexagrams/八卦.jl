@@ -40,6 +40,9 @@ else
 @test Base.ispacked(卦)
 end
 
+@test nameof(乾) === :乾
+@test nameof(坤) === :坤
+
 # rad2deg(tau/(8/卦))               rad2deg(tau/(8/(xor(乾, 卦))))
 # 兌 0b011 坎 0b010 震 0b001        艮 0b100 離 0b101 巽 0b110
 # 艮 0b100          坤 0b000        兌 0b011          乾 0b111

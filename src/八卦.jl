@@ -63,4 +63,9 @@ function Base.Char(trigram::Trigram)::Char
     '☰' + xor(0b111, a, b << 0b01, c << 0b10)
 end
 
+function Base.nameof(x::卦)::Symbol
+    names = (:坤, :震, :坎, :兌, :艮, :離, :巽, :乾)
+    Base.getfield(names, Int(UInt8(x) + 0b01))
+end
+
 end  # baremodule Hexagrams.八卦
