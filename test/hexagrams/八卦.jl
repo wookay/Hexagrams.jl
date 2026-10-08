@@ -12,7 +12,7 @@ using Hexagrams.八卦
       ⊻(艮, 兌) ≡ # 간 태 0b100 0b011
       乾
 
-⩣ = Base.Fix2(⊻, 乾)
+const ⩣ = Base.Fix2(⊻, 乾)
 @test ⩣(乾) ≡ 坤
 @test ⩣(震) ≡ 巽
 @test ⩣(坎) ≡ 離
@@ -29,7 +29,11 @@ using Hexagrams.八卦
 @test Char(Trigram(坎)) ≡ '☵'
 @test Char(Trigram(艮)) ≡ '☶'
 @test Char(Trigram(坤)) ≡ '☷'
-@test Trigram(乾).binary ≡ 乾
+
+const ☷ = Trigram(坤)
+@test ☷.binary ≡ 坤
+@test Char(☷) ≡ '☷'
+@test isprint(☷)
 
 @test string(乾, base=2, pad=3) ≡ "111"
 @test string(坤, base=2, pad=3) ≡ "000"
@@ -40,8 +44,10 @@ else
 @test Base.ispacked(卦)
 end
 
-@test nameof(乾) === :乾
-@test nameof(坤) === :坤
+for sym::Symbol in (:乾, :兌, :離, :震, :巽, :坎, :艮, :坤)
+    x::卦 = getglobal(八卦, sym)
+    @test nameof(x) ≡ sym
+end
 
 # rad2deg(tau/(8/卦))               rad2deg(tau/(8/(xor(乾, 卦))))
 # 兌 0b011 坎 0b010 震 0b001        艮 0b100 離 0b101 巽 0b110

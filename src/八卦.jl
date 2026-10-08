@@ -50,9 +50,15 @@ function Base.:(<<)(x::卦, n::UInt8)::UInt8
     Core.Intrinsics.shl_int(UInt8(x), n)
 end
 
+function Base.nameof(x::卦)::Symbol
+    names = (:坤, :震, :坎, :兌, :艮, :離, :巽, :乾)
+    Base.getfield(names, Int(UInt8(x) + 0b01))
+end
+
+using .Base: AbstractChar, @MIME_str
 using .Base: &, >>, +, xor, <<
 
-struct Trigram
+struct Trigram <: AbstractChar
     binary::卦
 end
 
@@ -63,9 +69,14 @@ function Base.Char(trigram::Trigram)::Char
     '☰' + xor(0b111, a, b << 0b01, c << 0b10)
 end
 
-function Base.nameof(x::卦)::Symbol
-    names = (:坤, :震, :坎, :兌, :艮, :離, :巽, :乾)
-    Base.getfield(names, Int(UInt8(x) + 0b01))
+function Base.UInt32(trigram::Trigram)::UInt32
+    char = Char(trigram)
+    Base.UInt32(char)
+end
+
+function Base.show(io::IO, mime::MIME"text/plain", trigram::Trigram)::Nothing
+    char = Char(trigram)
+    Base.show(io, mime, char)
 end
 
 end  # baremodule Hexagrams.八卦
