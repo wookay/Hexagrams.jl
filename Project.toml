@@ -6,10 +6,15 @@ authors = ["WooKyoung Noh <wookay.noh@gmail.com>"]
 [compat]
 julia = "1.6"
 Jive = "0.3"
+LogicalOperators = "0.1"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 Jive = "ba5e3d4b-8524-549f-bc71-e76ad9e9deed"
+LogicalOperators = "6ac76662-4673-4d6a-8390-a82adc3670cf"
 
 [targets]
-test = ["Test", "Jive"]
+test = ["Test", "Jive", "LogicalOperators"]
+
+[sources]
+LogicalOperators = {url = "https://github.com/wookay/LogicalOperators.jl", rev = "main"}

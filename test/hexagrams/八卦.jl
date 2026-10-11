@@ -49,6 +49,8 @@ for sym::Symbol in (:乾, :兌, :離, :震, :巽, :坎, :艮, :坤)
     @test nameof(x) ≡ sym
 end
 
+@test ndigits(乾) == 1
+
 # rad2deg(tau/(8/卦))               rad2deg(tau/(8/(xor(乾, 卦))))
 # 兌 0b011 坎 0b010 震 0b001        艮 0b100 離 0b101 巽 0b110
 # 艮 0b100          坤 0b000        兌 0b011          乾 0b111

@@ -33,8 +33,13 @@ function Base.xor(x::卦, y::卦)::卦
     Core.Intrinsics.xor_int(x, y)
 end
 
-function Base.string(x::卦; base::Int, pad::Int)::String
-    Base.string(UInt8(x); base, pad)
+function Base.string(x::卦; base::Integer = 0b1010, pad::Integer = 0b1)::String
+    if base == 0b1010
+        s = Base.String(Base.nameof(x))
+        Base.lpad(s, pad)
+    else
+        Base.string(UInt8(x); base, pad)
+    end
 end
 
 function Base.UInt8(x::卦)::UInt8
@@ -42,8 +47,16 @@ function Base.UInt8(x::卦)::UInt8
     f(UInt8, x)
 end
 
+function Base.:(&)(x::卦, y::卦)::卦
+    卦(Core.Intrinsics.and_int(UInt8(x), UInt8(y)))
+end
+
 function Base.:(&)(x::卦, n::UInt8)::UInt8
     Core.Intrinsics.and_int(UInt8(x), n)
+end
+
+function Base.:(|)(x::卦, y::卦)::卦
+    卦(Core.Intrinsics.or_int(UInt8(x), UInt8(y)))
 end
 
 function Base.:(<<)(x::卦, n::UInt8)::UInt8
@@ -77,6 +90,10 @@ end
 function Base.show(io::IO, mime::MIME"text/plain", trigram::Trigram)::Nothing
     char = Char(trigram)
     Base.show(io, mime, char)
+end
+
+function Base.ndigits(x::卦; base::Integer = 10, pad::Integer = 1)
+    Base.max(pad, Base.ndigits0z(UInt8(x), base))
 end
 
 end  # baremodule Hexagrams.八卦
