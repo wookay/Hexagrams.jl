@@ -92,6 +92,10 @@ function Base.show(io::IO, mime::MIME"text/plain", trigram::Trigram)::Nothing
     Base.show(io, mime, char)
 end
 
+function Base.iszero(x::卦)
+    Base.iszero(UInt8(x))
+end
+
 function Base.ndigits(x::卦; base::Integer = 10, pad::Integer = 1)
     Base.max(pad, Base.ndigits0z(UInt8(x), base))
 end
