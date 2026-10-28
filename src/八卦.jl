@@ -100,4 +100,8 @@ function Base.ndigits(x::卦; base::Integer = 10, pad::Integer = 1)
     Base.max(pad, Base.ndigits0z(UInt8(x), base))
 end
 
+function Base.count_ones(x::卦)
+    Base.count_ones(UInt8(x))
+end
+
 end  # baremodule Hexagrams.八卦

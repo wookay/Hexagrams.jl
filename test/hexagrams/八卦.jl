@@ -49,6 +49,8 @@ for sym::Symbol in (:乾, :兌, :離, :震, :巽, :坎, :艮, :坤)
     @test nameof(x) ≡ sym
 end
 
-@test ndigits(乾) == 1
+@test ndigits(乾) ≡ ndigits(坤) ≡ 1
+@test count_ones(乾) ≡ 3
+@test count_ones(坤) ≡ 0
 
 end # module test_hexagrams_八卦
