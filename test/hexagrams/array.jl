@@ -57,15 +57,20 @@ A = [0b011 0b111 0b110
 
 
 function bit_to_vec(byte::UInt8)::Vector{UInt8}
-    [byte >> 2, byte >> 1 & 0b01, byte & 0b001]
+    [byte >> 0b10,
+     byte >> 0b01 & 0b1,
+     byte         & 0b1]
 end
 
 function vec_to_bit(v::Vector{UInt8})::UInt8
-    v[1] << 2 | v[2] << 1 | v[3]
+    v[0b01] << 0b10 |
+    v[0b10] << 0b01 |
+    v[0b11]
 end
 
-@test (vec_to_bit ∘ bit_to_vec)(0b100) ≡ 0b100
-@test (vec_to_bit ∘ bit_to_vec)(0b010) ≡ 0b010
-@test (vec_to_bit ∘ bit_to_vec)(0b001) ≡ 0b001
+@test bit_to_vec(0b111) ≡ [0b1, 0b1, 0b1]
+for byte in 0b000:0b111
+    @test (vec_to_bit ∘ bit_to_vec)(byte) ≡ byte
+end
 
 end # module test_hexagrams_array
