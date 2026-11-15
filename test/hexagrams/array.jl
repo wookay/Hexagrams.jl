@@ -73,4 +73,7 @@ for byte in 0b000:0b111
     @test (vec_to_bit ∘ bit_to_vec)(byte) ≡ byte
 end
 
+Base.add_sum(x::UInt8, y::UInt8) = x + y
+@test sum(+, [0b01, 0b01]) ≡ 0b10
+
 end # module test_hexagrams_array
